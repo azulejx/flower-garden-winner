@@ -12,26 +12,25 @@
       <div class="jumbotron" id="title">
         <h1>Tiny Flower Garden</h1>
         <p>A flower garden for your apartment</p>
-        <span class="click">Click here to start!</span>
       </div>
-      <div class="jumbotron" id="quiz">
+      <div class="jumbotron" id="orderForm">
         <form id="flowers">
           <div class="form-group">
             <p>Select all the flowers you would like to have in your garden:</p>
-            <input type="checkbox" id="sunflower" val="1">Sunflower<br>
-            <input type="checkbox" id="bromeliad" val="1">Bromeliad<br>
-            <input type="checkbox" id="begonia" val="1">Begonia<br>
+            <input type="checkbox" name="flowers" value="1">Sunflower<br>
+            <input type="checkbox" name="flowers" value="1">Bromeliad<br>
+            <input type="checkbox" name="flowers" value="1">Begonia<br>
           </div>
         </form>
         <form id="size">
           <div class="form-group">
             <p>Select one size for your tiny flower garden:</p>
-            <input type="checkbox" id="small">Small<br>
-            <input type="checkbox" id="medium">Medium<br>
-            <input type="checkbox" id="large">Large<br>
+            <input type="radio" name="rbnNumber" value="1">Small<br>
+            <input type="radio" name="rbnNumber" value="2">Medium<br>
+            <input type="radio" name="rbnNumber" value="3">Large<br>
           </div>
         </form>
-        <button type="button" id="order">Build me a garden!</button>
+        <button type="button" id="placeOrder">Build me a garden!</button>
       </div>
       <div class="jumbotron" id="results">
       <p id="answer"></p>

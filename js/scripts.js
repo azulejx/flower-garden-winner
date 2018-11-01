@@ -1,22 +1,26 @@
 //BUSINESS LOGIC
-var orderTotal = {
-  total: "none"
+
+var flowersArray = [];
+var totalFlowers = 0;
+function addFlowers(num) {
+  for (var i = 0; i < num.length; i++) {
+    totalFlowers += num[i];
+  };
 };
 
-var flowers = [];
-var size = "";
 
-function Order(flowers, size) = {
-  this.flowers = flowers;
-  this.size = size;
-};
 
-var flowerSelection = flowers.forEach(function(flower) {
-  total += flowers;
+//USER LOGIC
+$(document).ready(function(){
+  $("#placeOrder").click(function(){
+    $("input:checkbox[name=flowers]:checked").each(function(){
+      var flowerSelection = parseInt($(this).val());
+      flowersArray.push(flowerSelection);
+    });
+
+    var sizeSelection = parseInt($("input[name=rbnNumber]:checked").val());
+    addFlowers(flowersArray);
+    console.log(sizeSelection);
+
+  });
 });
-
-Order.prototype.total = function() {
-  flowerSelection * this.size;
-};
-
-//UI LOGIC
