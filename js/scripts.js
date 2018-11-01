@@ -13,11 +13,11 @@ Order.prototype.price = function(){
   }
 
   if (this.size === "1") {
-    total *2;
+    total *= 2;
   } else if (this.size === "2") {
-    total *3;
+    total *= 3;
   } else if (this.size === "3"){
-    total *4;
+    total *= 4;
   }
   return total;
 }
@@ -29,15 +29,15 @@ $(document).ready(function(){
   $("#placeOrder").click(function(){
     var inputtedFlowers = [];
     $("input:checkbox[name=flowers]:checked").each(function(){
-      var flowerSelection = $(this).val();
-      inputtedFlowers.push(flowerSelection);
+      inputtedFlowers.push($(this).val());
     });
 
-    var inputtedSize = parseInt($("input[name=rbnNumber]:checked").val());
+    var inputtedSize = $("input[name=rbnNumber]:checked").val();
 
-    var newOrder = new Order(inputtedFlower, inputtedSize);
-    addFlowers(flowers);
-    console.log(totalFlowers * sizeSelection);
+    var newOrder = new Order(inputtedFlowers, inputtedSize);
 
+    var orderTotal = newOrder.price();
+
+    console.log(newOrder.price());
   });
 });
