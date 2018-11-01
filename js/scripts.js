@@ -7,9 +7,9 @@ function Order(flowers, size){
 
 Order.prototype.price = function(){
   var total = 0;
-  if(this.flowers.length >= 1){
+  if (this.flowers.length >= 1) {
     total += this.flowers.length;
-  }
+  } 
 
   if (this.size === "1") {
     total *= 2;
