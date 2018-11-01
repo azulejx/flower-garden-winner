@@ -12,6 +12,10 @@ This is a web application where a user can what kind and how many flowers they w
 
 * It can collect the size of the flower pot selected by user.
 
+* It can calculate the total of the order according to the pot size. Size small x1, medium x2, large x3.
+  * **Example Input:** Sunflower ($1), Begonia ($1) - Size: Large
+  * **Example Output:** Total = $6
+
 * It can identify numbers divisible by 3 and substitute them with "purr".
   * **Example Input:** 3
   * **Example Output:**
