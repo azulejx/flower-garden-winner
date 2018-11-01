@@ -37,8 +37,6 @@ $(document).ready(function(){
 
     var orderTotal = newOrder.price();
 
-    console.log(newOrder.price());
-
     $("#final-order").append("Your order total is $" + orderTotal);
   });
 });
