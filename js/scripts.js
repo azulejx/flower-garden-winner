@@ -1,25 +1,41 @@
 //BUSINESS LOGIC
 
-var flowers = [];
-var totalFlowers = 0;
-
-function addFlowers(num) {
-  for (var i = 0; i < num.length; i++) {
-    totalFlowers += num[i];
-  };
+function Order(flowers, size, total){
+  this.flowers = flowers;
+  this.size = size;
+  this.total = total;
 };
+
+Order.prototype.price = function(){
+  var total = 0;
+  if(this.flowers.length > 1){
+    total += this.flowers.length;
+  }
+
+  if (this.size === "1") {
+    total *2;
+  } else if (this.size === "2") {
+    total *3;
+  } else if (this.size === "3"){
+    total *4;
+  }
+  return total;
+}
 
 
 
 //USER LOGIC
 $(document).ready(function(){
   $("#placeOrder").click(function(){
+    var inputtedFlowers = [];
     $("input:checkbox[name=flowers]:checked").each(function(){
-      var flowerSelection = parseInt($(this).val());
-      flowers.push(flowerSelection);
+      var flowerSelection = $(this).val();
+      inputtedFlowers.push(flowerSelection);
     });
 
-    var sizeSelection = parseInt($("input[name=rbnNumber]:checked").val());
+    var inputtedSize = parseInt($("input[name=rbnNumber]:checked").val());
+
+    var newOrder = new Order(inputtedFlower, inputtedSize);
     addFlowers(flowers);
     console.log(totalFlowers * sizeSelection);
 
