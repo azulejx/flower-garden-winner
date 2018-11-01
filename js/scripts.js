@@ -21,7 +21,7 @@ $(document).ready(function(){
 
     var sizeSelection = parseInt($("input[name=rbnNumber]:checked").val());
     addFlowers(flowers);
-    console.log(totalFlowers);
+    console.log(totalFlowers * sizeSelection);
 
   });
 });
