@@ -1,14 +1,13 @@
 //BUSINESS LOGIC
 
-function Order(flowers, size, total){
+function Order(flowers, size){
   this.flowers = flowers;
   this.size = size;
-  this.total = total;
 };
 
 Order.prototype.price = function(){
   var total = 0;
-  if(this.flowers.length > 1){
+  if(this.flowers.length >= 1){
     total += this.flowers.length;
   }
 
@@ -39,5 +38,7 @@ $(document).ready(function(){
     var orderTotal = newOrder.price();
 
     console.log(newOrder.price());
+
+    $("#final-order").append("Your order total is $" + orderTotal);
   });
 });
