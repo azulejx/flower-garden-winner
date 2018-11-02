@@ -9,7 +9,7 @@ Order.prototype.price = function(){
   var total = 0;
   if (this.flowers.length >= 1) {
     total += this.flowers.length;
-  } 
+  }
 
   if (this.size === "1") {
     total *= 2;
@@ -19,7 +19,7 @@ Order.prototype.price = function(){
     total *= 4;
   }
   return total;
-}
+};
 
 
 
@@ -37,6 +37,6 @@ $(document).ready(function(){
 
     var orderTotal = newOrder.price();
 
-    $("#final-order").append("Your order total is $" + orderTotal);
+    $("#final-order").append("Your order total is $" + orderTotal + ". Not too bad for a garden!");
   });
 });
