@@ -37,6 +37,6 @@ $(document).ready(function(){
 
     var orderTotal = newOrder.price();
 
-    $("#final-order").append("Your order total is $" + orderTotal + ". Not too bad for a garden!");
+    $("#final-order").append("Your order total is $" + '<class="totalMoney" style="font-size: 35px;">' + orderTotal + '</class="totalMoney">' + ". Not too bad for a lovely garden!");
   });
 });
